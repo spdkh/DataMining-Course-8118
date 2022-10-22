@@ -1,0 +1,88 @@
+%%
+%% Author: SPDKH (s.dajkhosh@memphis.edu)
+%% Reference: http://www.ctan.org/tex-archive/info/simplified-latex/
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{alphabeta} 
+
+\usepackage[pdftex]{graphicx}
+\usepackage[top=1in, bottom=1in, left=1in, right=1in]{geometry}
+
+\linespread{1.06}
+\setlength{\parskip}{8pt plus2pt minus2pt}
+
+\widowpenalty 10000
+\clubpenalty 10000
+
+\newcommand{\eat}[1]{}
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+\usepackage[official]{eurosym}
+\usepackage{enumitem}
+\setlist{nolistsep,noitemsep}
+\usepackage[hidelinks]{hyperref}
+\usepackage{cite}
+\usepackage{lipsum}
+
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage[section]{placeins}
+\usepackage{floatrow}
+
+
+\begin{document}
+	
+	%===========================================================
+	\begin{titlepage}
+		\begin{center}
+			
+			% Top 
+			\includegraphics[width=0.55\textwidth]{figs/cslogo_horizontal.png}~\\[2cm]
+			
+			
+			% Title
+			\HRule \\[0.4cm]
+			{ \LARGE 
+				\textbf{COMP/EECE 8118 Data Mining}\\[0.4cm]
+				\emph{Project Proposal}\\[0.4cm]
+				\emph{Classification of autism spectrum disorder using resting-state fMRI using Artificial Neural Networks}\\[0.4cm]
+			}
+			\HRule \\[1.5cm]
+			
+			
+			
+			% Author
+			{ \large
+				S. Parisa Daj. \\[0.1cm]
+				Ph.D. student\\[0.1cm]
+				\texttt{s.dajkhosh@memphis.edu}
+			}
+			
+			\vfill
+			
+			
+			% Bottom
+			{\large \today}
+			
+		\end{center}
+	\end{titlepage}
+
+	
+\begin{abstract}
+	
+	Autism spectrum disorder (ASD) is a condition related to brain development that impacts how a person perceives and socializes with others. Early diagnosis of autism disorder involves in-depth behavioral observation and testing, which can be time consuming, expensive, and affected by clinician diagnostic bias. Early diagnosis of ASD using non-behavioral measurements can lead to improved outcomes for children with ASD. We developed algorithms to classify ASD based on publicly available brain-imaging datasets (ABIDE)\cite{abidei}, including functional-MRI brain scans from people with and without ASD diagnosis. Furthermore, the phenotypic data is also available for each patient which can help process the data with more details. Using a supervised deep neural network, the goal of this project is to classify pre-processed data from 200 regions of interest (atlas of craddock 200) into binary categories of ASD positive or negative. The challenges include finding an appropriate deep neural network and optimizing it, considering that data augmentation is not helping in this task as we cannot change patients information. Therefore, the data samples are limited, and the model is prone to over-fitting. Thus, cross validation and batch normalization layers might be necessary for reaching a high validation accuracy.
+	
+\end{abstract}
+
+\bibliography{bibfile} 
+\bibliographystyle{IEEEtran}
+
+\vspace{12pt}
+
+\end{document}
